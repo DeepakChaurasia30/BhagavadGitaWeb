@@ -1,0 +1,184 @@
+/* Body & Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #fdf6e3; /* Soft parchment fallback */
+    background-image: url('./assets/krishna.jpg'); /* replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(255, 253, 247, 0.95); /* Slightly transparent */
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #2c3e50;
+    color: #fdf6e3;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+    justify-content: center; /* center vertically if needed */
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Apply semi-transparent background for content sections */
+#sbar, #chapter, #dlist {
+    background-color: rgba(255, 253, 247, 0.85); /* semi-transparent parchment look */
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Search Bar Section */
+#sbar {
+    text-align: center;
+}
+
+#sbar h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#sbar input {
+    padding: 10px 15px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Chapter List Section */
+#dlist h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#dlist div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Individual chapter card */
+#dlist div > div {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    width: 220px;
+    background-color: rgba(255, 253, 247, 0.9);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#dlist div > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+#dlist h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+#dlist p {
+    font-size: 0.95rem;
+    margin: 5px 0;
+}
+
+/* Chapter Detail Section */
+#chapter h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1c2a3a;
+}
+
+#chapter h4 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+#chapter p {
+    margin: 12px 0;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 253, 247, 0.9);
+    text-align: center;
+    padding: 15px 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #dlist div > div {
+        width: 100%;
+    }
+
+    #sbar input {
+        width: 95%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
